@@ -16,11 +16,6 @@
 
 ## Overview
 
-Here's the converted section in Markdown for your `README.md`, preserving the structure and clarity of the original web layout:
-
----
-
-## 🧠 Introducing Our Work
 
 Recent breakthroughs in reasoning-focused large language models (LLMs)—like OpenAI-o1, DeepSeek-R1, and Kimi-1.5—have heavily relied on **Reinforcement Learning with Verifiable Rewards (RLVR)**. RLVR replaces human annotations with automated rewards (such as verified math answers or passed code tests) to enable scalable self-improvement. While RLVR enhances behaviors like **self-reflection** and **iterative refinement**, a critical question remains in the pursuit of continually self-evolving reasoning abilities:
 
