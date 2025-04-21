@@ -2,7 +2,7 @@
 <h1>Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?</h1>
 
 
-[Yang Yue](https://yueyang130.github.io/)<sup>1*</sup>†,  [Zhiqi Chen](https://zhiqichen05.github.io/)<sup>1*</sup>,  [Rui Lu](https://lr32768.github.io/)<sup>1</sup>,  [Andrew Zhao](https://andrewzh112.github.io/)<sup>1</sup>,  [Zhaokai Wang](https://www.wzk.plus/)<sup>2</sup>,  [Shiji Song](https://scholar.google.com/citations?user=rw6vWdcAAAAJ&hl=zh-TW)<sup>1</sup>,  [Gao Huang](http://www.gaohuang.net/)<sup>1‡</sup>  
+[Yang Yue](https://yueyang130.github.io/)<sup>1*</sup>†,  [Zhiqi Chen](https://zhiqichen05.github.io/)<sup>1*</sup>,  [Rui Lu](https://lr32768.github.io/)<sup>1</sup>,  [Andrew Zhao](https://andrewzh112.github.io/)<sup>1</sup>,  [Zhaokai Wang](https://www.wzk.plus/)<sup>2</sup>,  [Yang Yue](https://scholar.google.com/citations?user=Q9cLkdcAAAAJ&hl=en)<sup>1</sup>, [Shiji Song](https://scholar.google.com/citations?user=rw6vWdcAAAAJ&hl=zh-TW)<sup>1</sup>,  [Gao Huang](http://www.gaohuang.net/)<sup>1‡</sup>  
 
 <sup>1</sup> Tsinghua University, LeapLab  <sup>2</sup> Shanghai Jiao Tong University  
 
