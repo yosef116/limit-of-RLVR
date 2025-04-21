@@ -51,7 +51,7 @@ If you use this work, please cite:
 ```bibtex
 @article{yue2025limit-of-rlvr,
   title={Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?},
-  author={Yue, Yang and Chen, Zhiqi and Lu, Rui and Zhao, Andrew and Wang, Zhaokai and Yue, Yang and Song, Shjiji and Huang, Gao},
+  author={Yue, Yang and Chen, Zhiqi and Lu, Rui and Zhao, Andrew and Wang, Zhaokai and Yue, Yang and Song, Shiji and Huang, Gao},
   journal={arXiv preprint arXiv:2504.13837},
   year={2025}
 }
